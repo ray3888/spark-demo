@@ -8,11 +8,11 @@ object AccessLogAnalysis {
 
   def main(args: Array[String]) = {
     val sc = new SparkContext("local", "LogAggregation")
-    val log = sc.textFile("C:/3ray/workspace/scala/spark-demo/src/main/resources/accesslog/sampledata")
+    val log = sc.textFile("data/accesslog/sampledata")
     val p = new AccessLogParser
     //    log.foreach(println)
         get404(log)
-//    moreQueries(log)
+    moreQueries(log)
   }
 
   def get404(log: RDD[String]) {

@@ -6,7 +6,7 @@ object AccessLogAnalysis {
   def main(args: Array[String]): Unit = {
 
     val sc = new SparkContext("local", "LogAggregation")
-    val pagecounts = sc.textFile("D:/workspace/scala/spark-demo/src/main/resources/spark-log-aggregation/data/pagecounts/*")
+    val pagecounts = sc.textFile("data/spark-log-aggregation/*")
     pagecounts.take(10)
     pagecounts.take(10).foreach(println)
     pagecounts.count
