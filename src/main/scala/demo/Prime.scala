@@ -10,7 +10,8 @@ object Prime {
       i <- List.range(1, 7)
       j <- List.range(1, i)
       if isPrime(i + j)
-    } yield (i, j) //> res1: List[(Int, Int)] = List((2,1), (3,2), (4,1), (4,3), (5,2), (6,1), (6,5
+    } yield (i, j);
 
+    List.range(1,100) filter isPrime foreach println _
   }
 }
