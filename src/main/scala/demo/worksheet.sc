@@ -25,7 +25,7 @@ object worksheet {
       "Los Angeles" -> null)                      //> footballTeamsAFCEast  : scala.collection.immutable.Map[String,String] = Map(
                                                   //| Buffalo -> Bills, New England -> Patriots, Los Angeles -> null, New York -> 
                                                   //| Jets, Miami -> Dolphins)
-
+  
   footballTeamsAFCEast.get("Miami")               //> res5: Option[String] = Some(Dolphins)
   footballTeamsAFCEast.get("Los Angeles")         //> res6: Option[String] = Some(null)
   footballTeamsAFCEast.get("Sacramento")          //> res7: Option[String] = None

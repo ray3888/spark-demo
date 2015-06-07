@@ -10,6 +10,12 @@ object AccessLogAnalysis {
     pagecounts.take(10)
     pagecounts.take(10).foreach(println)
     pagecounts.count
+    
+///////////////word count
+//    val words = pagecounts.flatMap(_.split(" "))
+//    val wordCounts = words.map(x => (x, 1)).reduceByKey(_ + _)
+//    wordCounts.foreach(println _)
+    
     val enPages = pagecounts.filter(_.split(" ")(1) == "en").cache
     enPages.count
     val enTuples = enPages.map(line => line.split(" "))
