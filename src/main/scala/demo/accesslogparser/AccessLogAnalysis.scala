@@ -1,4 +1,4 @@
-package accesslogparser
+package demo.accesslogparser
 
 import org.apache.spark.SparkContext
 import org.apache.spark.rdd.RDD

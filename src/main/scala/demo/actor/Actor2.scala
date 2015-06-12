@@ -1,4 +1,4 @@
-package actor
+package demo.actor
 import scala.actors.Actor
 
 object Actor2 {

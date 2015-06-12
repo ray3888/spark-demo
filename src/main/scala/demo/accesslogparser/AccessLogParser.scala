@@ -1,4 +1,4 @@
-package accesslogparser
+package demo.accesslogparser
 
 import java.util.regex.Pattern
 import java.text.SimpleDateFormat

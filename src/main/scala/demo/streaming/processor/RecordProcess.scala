@@ -1,4 +1,4 @@
-package streaming.emitter
+package demo.streaming.processor
 
 /**
  * Currying all these functions.

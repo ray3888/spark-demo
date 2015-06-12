@@ -1,4 +1,4 @@
-package logaggregation
+package demo.logaggregation
 
 import org.apache.spark.SparkContext
 

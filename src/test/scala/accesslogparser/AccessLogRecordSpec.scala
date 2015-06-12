@@ -3,6 +3,9 @@ package accesslogparser
 import org.scalatest.FunSpec
 import org.scalatest.BeforeAndAfter
 import org.scalatest.GivenWhenThen
+
+import demo.accesslogparser.AccessLogParser;
+
 import java.util.Calendar
 
 class ApacheCombinedAccessLogRecordSpec extends FunSpec with BeforeAndAfter with GivenWhenThen {

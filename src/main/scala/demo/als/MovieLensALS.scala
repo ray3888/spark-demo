@@ -1,4 +1,4 @@
-package als
+package demo.als
 
 import java.util.Random
 

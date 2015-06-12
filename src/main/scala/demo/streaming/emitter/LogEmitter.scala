@@ -1,4 +1,4 @@
-package streaming.emitter
+package demo.streaming.emitter
 
 import java.io.{FileReader, BufferedReader, FileInputStream, IOException}
 import java.util.Properties

@@ -1,4 +1,4 @@
-package accesslogparser
+package demo.accesslogparser
 
 /**
  * @see http://httpd.apache.org/docs/2.2/logs.html for details
