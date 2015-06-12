@@ -52,12 +52,12 @@ object SqlJoin {
 
     //load historical data and register as temp table, the data source can be any types like jdbc, hdfs, redis...
     val etl_file = sqlContext.load("jdbc", Map(
-      "url" -> "jdbc:vertica://C0046252.itcs.hp.com:5433/poc?ConnectionLoadBalance=1&user=dbadmin&password=poc",
+      "url" -> "jdbc:vertica://ip:5433/poc?ConnectionLoadBalance=1&user=dbadmin&password=",
       "dbtable" -> "(select * from dev.etl_file order by ts desc limit 5) t")).registerTempTable("etl_file")
     //sqlContext.sql("select * from elecj_set").show()
 
     val elecj_test = sqlContext.load("jdbc", Map(
-      "url" -> "jdbc:vertica://C0046252.itcs.hp.com:5433/poc?ConnectionLoadBalance=1&user=dbadmin&password=poc",
+      "url" -> "jdbc:vertica://ip:5433/poc?ConnectionLoadBalance=1&user=dbadmin&password=",
       "dbtable" -> """(select stamp, pn_dm, die_site_nr, pass_fail_fg,processlk_ky,res_av,res_sd from dev.elecj_test 
                     where stamp in (select stamp from dev.etl_file order by ts desc limit 5)) t""")).cache()
     //    elecj_test.rdd.take(10).foreach { r => println(r) }
