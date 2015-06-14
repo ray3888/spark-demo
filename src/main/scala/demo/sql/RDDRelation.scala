@@ -42,8 +42,7 @@ object RDDRelation {
 //    // Once tables have been registered, you can run SQL queries over them.
     println("Result of SELECT *:")
     sqlContext.sql("SELECT * FROM records").collect().foreach(println)
-    
-    
+
     df = sc.parallelize((10 to 20).map(i => Record(i, s"val_$i"))).toDF()
     df.registerTempTable("records")
 
