@@ -24,6 +24,39 @@
 							<goal>compile</goal>
 							<goal>testCompile</goal>
 						</goals>
+						<configuration>
+							<includes>
+								<!-- <include>**/com/hp/*.scala</include> -->
+							</includes>
+							<excludes>
+								<!-- <exclude>**/test/scala/*.scala</exclude> -->
+							</excludes>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<version>2.4</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+						<configuration>
+							<artifactSet>
+								<excludes>
+									<exclude>classworlds:classworlds</exclude>
+									<exclude>junit:junit</exclude>
+									<exclude>jmock:*</exclude>
+									<exclude>*:xml-apis</exclude>
+									<exclude>org.apache.maven:lib:tests</exclude>
+									<exclude>log4j:log4j:jar:</exclude>
+								</excludes>
+							</artifactSet>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
@@ -57,19 +90,26 @@
 	<dependencies>
 
 		<!-- scala -->
-		<!-- <dependency> -->
-		<!-- <groupId>org.scala-lang</groupId> -->
-		<!-- <artifactId>scala-library</artifactId> -->
-		<!-- <version>2.10.5</version> -->
-		<!-- <scope>provided</scope> -->
-		<!-- </dependency> -->
+		<dependency>
+			<groupId>org.scala-lang</groupId>
+			<artifactId>scala-library</artifactId>
+			<version>2.10.4</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.scala-lang</groupId>
+			<artifactId>scala-actors</artifactId>
+			<version>2.10.4</version>
+			<scope>provided</scope>
+		</dependency>
 
 		<!-- scalatest -->
 		<dependency>
 			<groupId>org.scalatest</groupId>
 			<artifactId>scalatest_2.10</artifactId>
 			<version>2.2.4</version>
-			<scope>test</scope>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- spark core -->
@@ -140,7 +180,7 @@
 			<version>0.8.0</version>
 			<scope>provided</scope>
 		</dependency>
-		
+
 	</dependencies>
 
 	<repositories>
