@@ -188,6 +188,7 @@
 			<version>2.2.5</version>
 			<scrope>test</scrope>
 		</dependency>
+<!-- 		hh -->
 		<dependency>
 			<groupId>org.scalacheck</groupId>
 			<artifactId>scalacheck_2.10</artifactId>
