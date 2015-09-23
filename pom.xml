@@ -181,9 +181,37 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<!-- scala test -->
+		<dependency>
+			<groupId>org.scalatest</groupId>
+			<artifactId>scalatest_2.10</artifactId>
+			<version>2.2.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.scalacheck</groupId>
+			<artifactId>scalacheck_2.10</artifactId>
+			<version>1.12.2</version>
+			<scrope>test</scrope>
+		</dependency> 
+
+		<!-- spark-indexedrdd -->
+		<!-- <dependency> -->
+		<!-- <groupId>com.ankurdave</groupId> -->
+		<!-- <artifactId>part</artifactId> -->
+		<!-- <version>0.1</version> -->
+		<!-- </dependency> -->
 	</dependencies>
 
 	<repositories>
+		<repository>
+			<id>Repo at github.com/ankurdave/maven-repo</id>
+			<url>https://github.com/ankurdave/maven-repo/raw/master</url>
+		</repository>
+		<repository>
+			<id>Repo at github.com/ankurdave/maven-repo</id>
+			<url>https://raw.githubusercontent.com/ankurdave/maven-repo/master</url>
+		</repository>
 		<repository>
 			<id>Akka</id>
 			<url>http://repo.akka.io/releases/</url>
