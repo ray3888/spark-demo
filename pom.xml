@@ -187,15 +187,15 @@
 			<artifactId>scalatest_2.10</artifactId>
 			<version>2.2.5</version>
 		</dependency>
-
+		
 		<dependency>
 			<groupId>org.scalacheck</groupId>
 			<artifactId>scalacheck_2.10</artifactId>
 			<version>1.12.2</version>
 			<scrope>test</scrope>
-		</dependency> 
+		</dependency>
 
-		<!-- spark-indexedrdd -->
+		<!-- spark-indexedrdd --> 
 		<!-- <dependency> -->
 		<!-- <groupId>com.ankurdave</groupId> -->
 		<!-- <artifactId>part</artifactId> -->
