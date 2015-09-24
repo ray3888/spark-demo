@@ -186,14 +186,13 @@
 			<groupId>org.scalatest</groupId>
 			<artifactId>scalatest_2.10</artifactId>
 			<version>2.2.5</version>
-			<scrope>test</scrope>
+			<scope>test</scope>
 		</dependency>
-<!-- 		hh -->
 		<dependency>
 			<groupId>org.scalacheck</groupId>
 			<artifactId>scalacheck_2.10</artifactId>
 			<version>1.12.2</version>
-			<scrope>test</scrope>
+			<scope>test</scope>
 		</dependency>
 
 		<!-- spark-indexedrdd --> 
