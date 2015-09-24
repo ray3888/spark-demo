@@ -18,7 +18,9 @@ object Test {
 
         // Perform a point update.
         var indexed2 = indexed.put(1234L, 10873).cache()
+        println(indexed2.count())
         indexed2 = indexed.put(1234L, 10874).cache()
+        println(indexed2.count())
         // Perform a point lookup. Note that the original IndexedRDD remains
         // unmodified.
         println(indexed2.get(1234L)) // => Some(10873)
